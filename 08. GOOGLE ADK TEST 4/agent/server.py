@@ -2,7 +2,7 @@ import requests
 import uvicorn
 from mcp.server.fastmcp import FastMCP
  
-OPENWEATHER_API_KEY = "bf378e4a4db796edb04f652486bf3929"
+OPENWEATHER_API_KEY = ""
  
 mcp = FastMCP("Weather MCP Server")
  
@@ -58,3 +58,4 @@ def get_city_weather(city: str):
    
 if __name__ == "__main__":
     mcp.run(transport="sse")
+
