@@ -1,0 +1,9 @@
+from RAG import es, index_name
+
+doc = es.search(
+    index=index_name,
+    size=1,
+    query={"match_all": {}}
+)
+
+print(doc["hits"]["hits"][0]["_source"].keys())
